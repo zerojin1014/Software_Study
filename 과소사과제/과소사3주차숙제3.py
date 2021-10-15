@@ -6,18 +6,23 @@
 # 이므로, 마지막 값인 987을 반환한다.
 
 num = int(input("범위를 입력하세요 : "))
-
+A = 0
+B = 1
+List=[]
 
 
 for i in range(10):
-    F0 = 0
-    F1 = 1
-    A = F0 + F1  # A = 1
-    B = F1 + A  # B = 2
     C = A + B # C = 3
+    List.append(C)
     A = B + C # A = 5
+    List.append(A)
     B = C + A # B = 8
-    print(A,B,C)
+    List.append(B)
+    
+
+    print(List)
+
+
 
 # F = 
 
