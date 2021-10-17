@@ -3,6 +3,16 @@
 # 예 1) 5는 소수이므로 참 값을 반환합니다.
 # 예 2) 8은 소수가 아니므로 거짓 값을 반환합니다.
 
-# 문제풀이 전략 1은 소수가 아니다.
-# 소수의 배수는 소수가 아니다.
+# def prime_number (num):
+#     for i in range(1,num):
+#         if num % i == 0 :
+#             return False
+#     return True
+    
+def solution(num):
 
+    for i in range(2, num):
+        if num % i == 0:
+            return False 
+
+    return True

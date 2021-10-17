@@ -5,22 +5,43 @@
 # 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
 # 이므로, 마지막 값인 987을 반환한다.
 
-num = int(input("범위를 입력하세요 : "))
 
+# def solution(n):
+#     a = 0 
+#     b = 1
+#     c = a+b
 
+#     while c <= n :
+#         a = b
+#         b = c
+#         c = a + b
 
-for i in range(10):
-    F0 = 0
-    F1 = 1
-    A = F0 + F1  # A = 1
-    B = F1 + A  # B = 2
-    C = A + B # C = 3
-    A = B + C # A = 5
-    B = C + A # B = 8
-    print(A,B,C)
+#     return(b)
 
-# F = 
+# def solution(n):
+#     result = []
+#     a, b = 0, 1
+#     while a <= n:
+#         result.append(a)
+#         a, b = b, a+b
+#     return result[-1]
 
+# for i in range (0,6000):
+#     print(solution(i))
 
-# if i <= num :
-#     print(i) 
+def solution(n):
+    a = 0 
+    b = 1
+    c = a+b
+
+    if n <= 0:
+        return(0)
+    else:
+
+        while c <= n :
+            a = b
+            b = c
+            c = a + b
+
+        return(b)
+print(solution(0))

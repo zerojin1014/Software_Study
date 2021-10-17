@@ -5,3 +5,20 @@
 # 단, 두수의 크기에 상관 없는 순서로 parameter 들이 주어집니다.
 
 # 예) 16과 20의 최대공약수는 4이므로 4를 반환합니다.
+
+# def Maxnum(a,b):
+#     if b > a :
+#         a,b = b,a
+    
+#     while b !=0 :
+#         a,b = b,a%b
+#         return(a)
+
+# print(Maxnum(40,24))
+
+def solution(a,b):
+    while b > 0 :
+        tmp = a%b
+        a = b
+        b = tmp
+    return a
