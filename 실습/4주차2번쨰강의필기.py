@@ -46,12 +46,12 @@
 # 다시 400으로 나누어 떨어지면 윤년이다.
 # 윤년은 2월에 하루가 더해져서 29일 까지 있습니다.
 
-year = int(input("연도를 입력하세요 : "))
+# year = int(input("연도를 입력하세요 : "))
 
-if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0 :
-    print("윤년입니다.") 
-else :
-    print("윤년이 아닙니다.")
+# if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0 :
+#     print("윤년입니다.") 
+# else :
+#     print("윤년이 아닙니다.")
 
 # 근의 공식 x = [-b +- sqrt(b**2 -4*a*c)/2*a]
 
@@ -63,30 +63,34 @@ else :
 # choice() : Returns a random element from the given sequence
 # random() : Returns a random float number between 0 and 1
 
+# 가위 바위 보
+import random
+number = random.randint(0,2)
+myanswer = input("가위 바위 보 중 선택하세요 : ")
 
-#### 4주차 3 #### (Revisit)
-# 컴퓨터는 정보를 비트로 표시
-# 8비트 -> 1바이트 , 32/64 비트 -> 1워드(word)
+if number == 0 :
+    computer = "가위"
+elif number == 1:
+    computer = "바위"
+else : 
+    number = "보"
 
-# 비트 논리 연산자 ????????                 >> 공부필요
-# 비트 쉬프트 연산자 ??
-# 비트마스크 ??
+print("사용자 : ",myanswer," 컴퓨터 : ",computer)
 
-# E - 표기법 ??
-# 10진수 -> 2진수 변환 ?
-
-#### 4주차 4 ####
-
-string ='abcdef'
-print(string[0:4])
-
-# string[3] = 'z'  >>>>>>> string은 불변 타입 immutable 
-
-# 불변 데이터 타입 : tuple , string
-# 가변 데이터 타입 : list , dictionary, set
-
-# Boolean Data > True 는 1 False는  0   bool() : boolean으로 변환
-# chr(숫자) : 숫자에 해당하는 아스키 (ascii) 문자로 변환
-# ord(문자) : 아스키 문자에 해당하는 숫자로 변환
-# Type() : 변수가 가리키는 객체 (object)의 타입을 알고 싶을 때 사용함
-
+if myanswer == computer :
+    print("비김")
+elif myanswer == "가위":
+    if computer == "바위":
+        print("컴퓨터가 이겼음")
+    else:
+        print("사용자가 이겼음")
+elif myanswer == "바위":
+    if computer == "가위":
+        print("사용자가 이겼음")
+    else : 
+        print("컴퓨터가 이겼음")
+elif myanswer =="보":
+    if computer =="가위":
+        print("컴퓨터가 이겼음")
+    else :
+        print("사용자가 이겼음")
