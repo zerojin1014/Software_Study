@@ -1,19 +1,4 @@
-#### 4주차 1 ####
-# 문자열의 중간문자 찾기
-
-# string = input("문자열을 입력하세요: ")
-# length = len(string)
-
-# if length%2 == 1:  # 문자개수가 홀수
-#     ch1 = string[length//2]   #abcde 중에 5//2 = 2 index[2] = c
-#     print("중앙 글자는 ", ch1)
-
-# else: #abcd 중에 bc, 인덱스로는 1,2번째 4//2 와 4//2 -1
-#     ch1 = string[length//2-1]
-#     ch2 = string[length//2]
-#     print("중앙 글자는" , ch1,',',ch2)
-
-#### 4주차 2 ####
+#######################  4주차 2 #############################
 
 # 1 = ture , 0 = false
 # 논리 연산자
@@ -21,11 +6,28 @@
 # x or y : x 나 y 중에서 하나만 참이면 참 모두 거짓이면 거짓
 # not x : x가 참이면 거짓, x가 거짓이면 참
  
+# 연속적인 if-else 문
+# 학생들의 성적을 받아서 90점 이상이면 A 80점 이상이면 B 80미만이면C
+
+# for i in range(1,4):
+#     score = int(input("시험점수를 입력해주세요 : "))
+#     if score >= 90 :
+#         print (i,"번째 학생은 A입니다.")
+#     elif score >= 80 : 
+#         print (i,"번째 학생은 B입니다.")
+#     else : 
+#         print (i,"번째 학생은 C 입니다.")
+
 
 # 아이디를 입력받아서 등록된 아이디인지 검사하는 프로그램
 # 등록된 아이디를 리스트(list)에 저장하도록 한다. 아이디가 일치하면 패스워드 물어본다.
 
-# IdList = ['koalapyj','zerojin1014','20172289','koalapyj1']
+# print("회원가입 창입니다.")
+# IdList = []
+# Id = input("원하는 아이디를 입력하세요:")
+# IdList.append(Id)
+# print(IdList)
+
 # Id = input("아이디를 입력하시오: ")
 
 # if Id in IdList:
@@ -38,7 +40,23 @@
 # else :
 #     print("등록되지 않은 회원입니다.")
 
- # Random Module 
+######### 윤년 판단하기 ##################
+# 윤년의 조건 
+# 연도가 4로 나누어 떨어지면 윤년이다. 그치만 100으로 나누어 떨어지는 연도는 제외한다.
+# 다시 400으로 나누어 떨어지면 윤년이다.
+# 윤년은 2월에 하루가 더해져서 29일 까지 있습니다.
+
+year = int(input("연도를 입력하세요 : "))
+
+if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0 :
+    print("윤년입니다.") 
+else :
+    print("윤년이 아닙니다.")
+
+# 근의 공식 x = [-b +- sqrt(b**2 -4*a*c)/2*a]
+
+# 숫자게임에 오신걸 환영합니다. 
+# Random Module 
 
 # seed() : Initialze the random number generator
 # randint() : Returns a random number between the given range
@@ -50,7 +68,7 @@
 # 컴퓨터는 정보를 비트로 표시
 # 8비트 -> 1바이트 , 32/64 비트 -> 1워드(word)
 
-# 비트 논리 연산자 ???????? >> 공부필요
+# 비트 논리 연산자 ????????                 >> 공부필요
 # 비트 쉬프트 연산자 ??
 # 비트마스크 ??
 
