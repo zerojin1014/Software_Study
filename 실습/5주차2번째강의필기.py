@@ -1,34 +1,3 @@
-#### 5주차 1 ####
-# A = input()
-# escape 문자 
-
-# print("정신차려\n"+"이친구야")
-# print("정신차려\n이친구야")
-# print("\"정신차려\"\n이친구야")
-
-# print("\n"*10+"이친구야")
-
-# # 스트링 출력 포맷
-# phi = 3.14
-# x = 3
-# y = 4
-
-# # print("Phi is %d" %phi)
-# # print("x is %d, y is %d " %(x,y))
-# # print("Hello, %s" %input())
-
-# # WWW 으로 부터의 입력 ??? 
-
-# # 랜덤난수
-# import random
-# i = 1 
-
-# for i in range(1,6):
-#     print("Random #%d : %d " %(i, random.randint(1,6)))
-#     i += 1
-
-# 숙제 로또 만들기
-
 #### 5주차 2 ####
 
 # print(bool(3>4))
@@ -49,8 +18,8 @@
 
 # ################################## 5주차 3 ##################################
 
-# for name in ["철수","영희","길동","영진"]:
-#     print("안녕")
+for name in ["철수","영희","길동","영진"]:
+    print("안녕,",name)  
 
 # for x in [0,1,2,3,4,5,6,7,8,9]:
 #     print(x, end='')  #한 줄로 쓰고싶다면 end =''
@@ -66,18 +35,35 @@
 
 # for c in "abcdef":
 #     print(c, end=" ")
+sum = 1
+n = int(input("어디까지?: "))
+for i in range(1,n+1):
+    sum *= i
+print(sum)
 
-# n = int(input("어디까지?: "))
-# for i in range(n):
-#     i += i
-# print(i)
 
-
-# for t in range(0,100+1,10):
-#     c =(t-32.0) * 5.0/9.0
-#     print(t,"->",round(c,2))
+for t in range(0,100+1,10):
+    c =(t-32.0) * 5.0/9.0
+    print(t,"->",round(c,2))
 
 ###   round(A,2) A를 둘째자리까지 반올림 
 
 ## turtle 그려보기 ###  ???????????
+import turtle
 
+polygon = turtle.Turtle()
+
+for i in range(5): 
+    polygon.forward(50)
+    polygon.right(144)
+
+import math
+t = turtle.Turtle()
+
+t.pendown()
+for angle in range(360):
+    y = math.sin(math.radians(angle))
+    scaledX = angle
+    scaledY = y * 200 
+    t.goto(scaledX,scaledY)
+t.penup()

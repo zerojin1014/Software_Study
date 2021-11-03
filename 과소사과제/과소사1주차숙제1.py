@@ -2,6 +2,23 @@
 # weekday면 중앙의 문자열은 k가 된다. 하지만 만약 문자열이 짝수개의 문자를 가지고 있다면
 # 중앙의 2개의 글자를 출력한다. 예를 들어서 string 문자열에서는 ri를 반환한다.
 
+string = input(":")
+   
+if len(string) %  2 == 1 :  #01234
+   print(string[(len(string)//2)])
+
+elif len(string) % 2 == 0 : #0123
+    print(string[(len(string)//2)], end=" ")
+    print(string[((len(string)//2)-1)])
+
+# def solution(str):
+#     answer = ''
+#     if len(str)%2==1:
+#         return str[len(str)//2]
+#     else:
+#         return str[(len(str)//2-1): len(str)//2+1]
+#     return answer
+
 # 접근 목표 string이 홀수일때 인덱스 > weekday = 0123456 string의 길이/2 의 문자를 추출한다. 
 # string이 짝수일 때 string = 012345 string/2
 
@@ -29,10 +46,10 @@
 
 # print(s[2:3])
 
-def solution(str):
-    answer = ''
-    if len(str)%2==1:
-        return str[len(str)//2]
-    else:
-        return str[(len(str)//2-1): len(str)//2+1]
-    return answer
+# def solution(str):
+#     answer = ''
+#     if len(str)%2==1:
+#         return str[len(str)//2]
+#     else:
+#         return str[(len(str)//2-1): len(str)//2+1]
+#     return answer

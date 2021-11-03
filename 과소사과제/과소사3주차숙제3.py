@@ -44,4 +44,4 @@ def solution(n):
             c = a + b
 
         return(b)
-print(solution(0))
+print(solution(1000))

@@ -22,3 +22,5 @@ def solution(a,b):
         a = b
         b = tmp
     return a
+
+print(solution(12,28))

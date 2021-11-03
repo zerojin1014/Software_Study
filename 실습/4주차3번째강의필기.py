@@ -6,24 +6,57 @@
 # 컴퓨터는 정보를 비트로 표시
 # 8비트 (bit) -> 1바이트 (Byte), 32/64 비트 -> 1워드(word)
 
+
 # 비트 논리 연산자      >> 공부필요
-# & : 비트 논리곱
+# & : 비트 논리곱   둘 다
 # \ : 비트 논리합
 # ^ : 비트 XOR
 # ^ : 캐롯(carrot) 
 # XOR : Exclusive OR 
 # ~ : 비트 논리 부정  
-#           
+
+
+a = 15
+b = 5
+print (bin(15),"\n",bin(5))
+print(a&b, bin(a&b)) # a와 b 둘다 1이어야 1
+print(a|b, bin(a|b)) # a와 b 둘 중 하나만 1이여도 1
+print(a^b, bin(a^b)) # a와 b 다르면 1 같으면 0
+# a^b^a=b
+print(~a, bin(~a)) # 0을 1로 1을 0으로
+
+print(int('1010',2))
+
 # 비트 쉬프트 연산자 ??
+# >> 오른쪽 shift   각 비트를 오른쪽으로 옮긴다. #2로 나누는 효과
+# << 왼쪽 shift     각 비트를 왼쪽으로 옮긴다. #2를 곱하는 효과
+print(a>>2,bin(a>>2))
+print(b<<2,bin(b<<2))
+
 # 비트마스크 ??
+print("")
+x = 4
+print(bin(x))
+for i in range(3):
+    print("1st bit of %d" %x, 1 & (x>>i))
 
-# E - 표기법 ??
-# 10진수 -> 2진수 변환 ?
+# E - 표기법 
+y = 12300000000             #1.230000e+10 은 10**(10)
+                            #1.23e-09 은 10**(-9)
+print('%e' %y)
+y = 0.00000000123
+print(y)
 
-#### 4주차 4 ####
+# # 10진수 -> 2진수 변환 ?
 
-string ='abcdef'
-print(string[0:4])
+print(bin(2017))
+print(int('1010',2))
+
+#######################  4주차 4 #############################
+# (Revisit)
+
+# string ='abcdef'
+# print(string[0:4])
 
 # string[3] = 'z'  >>>>>>> string은 불변 타입 immutable 
 
