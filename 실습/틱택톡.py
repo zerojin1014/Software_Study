@@ -42,7 +42,7 @@ def drawBoard(board):
     print("     0  |  1 |  2 ")
     print("    ----|----|----")
     for r in range(3) :
-        print(r, ":   " + board[0][r] + " |  " + board[1][r] + " |  " + board[2][r])
+        print(r, ":   " + board[r][0] + " |  " + board[r][1] + " |  " + board[r][2])
         if (r != 2) :
             print("    ----|----|----")
 
