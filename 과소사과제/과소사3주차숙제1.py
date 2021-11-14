@@ -16,3 +16,5 @@ def solution(num):
             return False 
 
     return True
+
+print(bin(0010,))
