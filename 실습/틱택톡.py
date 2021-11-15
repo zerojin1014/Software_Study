@@ -46,17 +46,22 @@ def drawBoard(board):
         if (r != 2) :
             print("    ----|----|----")
 
-def checkToWin(gameboard, ch, x, y):
+def checkToWin(board, ch, x, y):
+
+    if board[x][0] == board[x][1] == board[x][2] == ch :
+        return True
+
+    elif board[0][y] == board[1][y] == board[2][y] == ch:
+        return True
     
-    # 행에 3개의 같은 문자가 있는지 확인
-    
-    # 열에 3개의 같은 문자가 있는지 확인
-    
-    # 대각선에 3개의 같은 문자가 있는지 확인, 기울기가 -1인 경우
-    
-    # 대각선에 3개의 같은 문자가 있는지 확인, 기울기가 1인 경우
-    
-    return False
+    elif board[0][0] == board[1][1] == board[2][2] == ch:
+        return True
+
+    elif board[2][0] == board[1][1] == board[0][2] == ch:
+        return True
+         
+    else :
+        return False
 
 ##########################################################
 import random
@@ -64,9 +69,11 @@ print("TicTacToe Game 을 시작합니다.")
 board = [[' ' for x in range(3)] for y in range(3)]
 #empty board
 print(board)
+turn = 0 
 
 while True : 
     
+    turn += 1
     drawBoard(board)
     
     # 사용자로부터 좌표를 입력받는다.
@@ -81,6 +88,7 @@ while True :
     else : 
         board[x][y] = 'X'
         
+        
     # # 컴퓨터가 놓을 위치를 결정한다. 첫 번째로 발견하는 비어있는 칸에 놓는다.
     # done = False
     # for i in range(3):
@@ -91,11 +99,15 @@ while True :
     #             break
             
     # 사용자가 이겼는지 확인합니다. 이긴 경우 while loop를 종료합니다.
-    if (checkToWin(board,'X',x,y) == True):
+    if (checkToWin(board, 'X', x, y) == True):
         print("이겼습니다!! 축하합니다.")
         drawBoard(board)
         break
-            
+
+    if turn >= 5 :
+        drawBoard(board)
+        break    
+
     # 컴퓨터가 놓을 위치를 random 으로 결정한다.
     
     locating = True 
@@ -110,9 +122,14 @@ while True :
     # 컴퓨터가 이겼는지 확인합니다. 사용자가 진 경우도 while loop를 나갑니다.
     if (checkToWin(board, 'O', com_x, com_y) == True ):
         print("컴퓨터가 이겼습니다.. 안타깝네요")
+        drawBoard(board)
         break
     
+    if turn >= 5 :
+        break
 print("Game over!")
+
+
 # while True :
 #      # 게임 보드를 그린다.
 #      for i in range(3):s
