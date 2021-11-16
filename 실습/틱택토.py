@@ -48,15 +48,19 @@ def drawBoard(board):
 
 def checkToWin(board, ch, x, y):
 
+    # 열의 element가 같은 경우
     if board[x][0] == board[x][1] == board[x][2] == ch :
         return True
 
+    # 행의 element가 같은 경우
     elif board[0][y] == board[1][y] == board[2][y] == ch:
         return True
     
+    # 기울기가 -1인경우
     elif board[0][0] == board[1][1] == board[2][2] == ch:
         return True
 
+    # 기울기가 1인경우
     elif board[2][0] == board[1][1] == board[0][2] == ch:
         return True
          
