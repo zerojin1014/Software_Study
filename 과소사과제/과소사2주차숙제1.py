@@ -4,9 +4,6 @@
 #     return answer 
 
 
-from re import I
-
-
 Message = input("입력하세요 :")
 List = list(Message)
 print (List)
