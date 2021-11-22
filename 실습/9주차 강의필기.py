@@ -183,3 +183,91 @@ if (check_pal(s) == True) :
     print("회문입니다.")
 else :
     print("회문이 아닙니다.")
+    
+    
+# 머리 글자어 만들기
+phrase = input("문자열을 입력하시오 : ")
+print(phrase.upper())
+print(phrase.split())
+print(phrase.upper().split())
+
+acronym = ''
+for word in phrase.upper().split() :
+    acronym += word[0]
+    
+print(acronym)
+
+########### 공백제거 replace vs strip ##############
+########## replace ##########
+# 공백 있는 문자열
+name = " B l o ck DM a  s   k  "
+
+# replace 함수를 이용해서 공백 제거
+
+result = name.replace(" " , "")
+# 결과문자열 = 문자열.replace(old, new)
+
+print("공백 제거한 문자열 : "+ result)
+
+########### strip ##############
+# 문자열.strip()
+# 모든 공백을 제거할 수 있는 replace 함수와 달리 양쪽 끝에 있는 공백을 제거할 수 있습니다.
+name = " B l o ck DM a  s   k  "
+
+result = name.strip()  #양쪽 공백 제거
+
+print(result)
+print(name.rstrip())    #오른쪽 공백 제거
+print(name.lstrip())    #왼쪽 공백 제거
+#####################################################
+
+
+# # CSV 파일 분석
+
+# f = open (".txt", "r")
+
+# # f.readlines() 라인을 한줄 한줄 모두 읽는다  
+# for line in f.readline():
+    
+#     # 양 쪽 공백을 제거한다.
+#     line = line.strip()
+    
+#     # 줄을 출력한다.
+#     print(line)
+    
+#     # 줄을 단어로 분리한다.
+#     words = line.split(",")
+    
+#     # 줄의 단어를 출력한다.
+#     for word in words :
+#         print("  ", word)
+
+# 문자열 안에 있는 문자의 개수, 숫자의 개수, 공백의 개수를 계산하는 프로그램
+
+''' 문자열을 입력하시오 : A picture is worth a thousand words.
+{digits:0 , spaces : 6, alphas : 29 '''
+
+sentence = input("문자열을 입력하시오 : ")
+
+table = {"alphas": 0, "spaces":0, "digits" : 0} 
+
+for i in sentence:
+    if i.isalpha():
+        table["alphas"] += 1
+    if i.isdigit():
+        table["digits"] += 1
+    if i.isspace():
+        table["spaces"] += 1
+    
+print(table)
+
+
+####
+'''
+튜플은 리스트와 유사하지만 변경할 수 없는 객체이다.
+세트는 집합으로 요소들은 중복되지 않아야 한다.
+딕셔너리는 사전으로 키와 값의 쌍으로 저장된다. 키를 이용하여 벨류를 찾을 수 있다.
+'''
+###
+
+########### Revisit : Structured Type 2 강의 #############
