@@ -1,3 +1,4 @@
+
 # for i in range(0):
 
 # len() 길이계산
@@ -25,19 +26,19 @@
 
 # 2차원 리스트
 
-s = [
-    [1,2,3,4,5],
-    [6,7,8,9,10],
-    [11,12,13,14,15]
-]
-print(s)
+# s = [
+#     [1,2,3,4,5],
+#     [6,7,8,9,10],
+#     [11,12,13,14,15]
+# ]
+# print(s)
 
-rows = 3
-cols = 5
+# rows = 3
+# cols = 5
 
-s = []
-for row in range(rows):
-    s +=[[0]*cols]
+# s = []
+# for row in range(rows):
+#     s +=[[0]*cols]
 
-print("s=",s) 
+# print("s=",s) 
 
