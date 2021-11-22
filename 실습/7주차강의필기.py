@@ -1,8 +1,15 @@
+# 6-1 리스트 개념 강의
+
+scores = []
+for i in range(10):
+    scores.append(int(input("성적을 입력하시오 : ")))
+print(scores)
 
 # for i in range(0):
 
 # len() 길이계산
 # 2개의 시퀀스 연결 +
+######### * 반복 [Welcom!]* 3 = [Welcom!,Welcom!,Welcom!]
 # in 소속
 # not in 소속하지 않음
 # [] 인덱스

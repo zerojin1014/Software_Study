@@ -2,6 +2,17 @@
 # weekday면 중앙의 문자열은 k가 된다. 하지만 만약 문자열이 짝수개의 문자를 가지고 있다면
 # 중앙의 2개의 글자를 출력한다. 예를 들어서 string 문자열에서는 ri를 반환한다.
 
+munja = input(":")
+a = len(munja)
+
+if a% 2 == 1: #012
+    print(munja[a//2])
+
+elif a % 2 == 0 : #0123
+    print(munja[(a//2)-1], end='')
+    print(munja[a//2])
+    
+
 string = input(":")
    
 if len(string) %  2 == 1 :  #01234
