@@ -1,11 +1,14 @@
-# def solution(year, month) :
+def solution1(year, month) :
 
 #     # year 연 수 2021
 #     # month 월 수 10
 
-#     answer = 0 
+    if year < 0 or (month < 0 or month >= 13) :
+        return False
 
-#     return answer
+    elif (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0):
+        return True
+        
 
 # year = int(input("년도"))
 # month = int(input("월"))
@@ -51,4 +54,4 @@ def solution(year, month):
         else:
             return(28)
 
-    return answer
+

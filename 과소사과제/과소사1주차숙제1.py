@@ -13,14 +13,14 @@ elif a % 2 == 0 : #0123
     print(munja[a//2])
     
 
-string = input(":")
+# string = input(":")
    
-if len(string) %  2 == 1 :  #01234
-   print(string[(len(string)//2)])
+# if len(string) %  2 == 1 :  #01234
+#    print(string[(len(string)//2)])
 
-elif len(string) % 2 == 0 : #0123
-    print(string[(len(string)//2)], end=" ")
-    print(string[((len(string)//2)-1)])
+# elif len(string) % 2 == 0 : #0123
+#     print(string[(len(string)//2)], end=" ")
+#     print(string[((len(string)//2)-1)])
 
 # def solution(str):
 #     answer = ''

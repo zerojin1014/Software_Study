@@ -3,6 +3,9 @@
 # 중첩 루프 
 # 중첩 for 문을 이용하여 *기호를 사각형 모양으로 출력하는 프로그램
 
+from typing import Counter
+
+
 for y in range(5):
     for x in range(10):
         print("*",end="")
@@ -26,6 +29,17 @@ for letter in fruit:
     print(letter, end=" ")
 
 # 모음을 삭제하는 문자열 처리 예제 !!중요할거같음..
+
+s =input("문자열을 입력하세요 : ")
+vowels = "aeiouAEIOU"
+result = ""
+count = 0
+for i in s :
+    if i not in vowels:
+        result += i
+    else : 
+        count += 1
+print(result, count)
 
 # s = input("문자열을 입력하세요: ")
 # vowels = "aeiouAEIOU"
@@ -83,3 +97,9 @@ for i in num:
     if i != "-":
         result += i
 print(result)
+
+
+# for i in num:
+#     if i != "-":
+#         result += i
+# print(result)
