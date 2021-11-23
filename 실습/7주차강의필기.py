@@ -1,9 +1,9 @@
 # 6-1 리스트 개념 강의
 
-scores = []
-for i in range(10):
-    scores.append(int(input("성적을 입력하시오 : ")))
-print(scores)
+# scores = []
+# for i in range(10):
+#     scores.append(int(input("성적을 입력하시오 : ")))
+# print(scores)
 
 # for i in range(0):
 
@@ -32,20 +32,42 @@ print(scores)
 # print(new_list)
 
 # 2차원 리스트
+'''
+from typing import List
 
-# s = [
-#     [1,2,3,4,5],
-#     [6,7,8,9,10],
-#     [11,12,13,14,15]
-# ]
-# print(s)
 
-# rows = 3
-# cols = 5
+s = [
+    [1,2,3,4,5],
+    [6,7,8,9,10],
+    [11,12,13,14,15]
+]
+print(s)
+rows = (len(s))
+cols = (len(s[0]))
 
+for r in range(rows):
+    for c in range(cols):
+        print(s[r][c], end=",")
+    print()
+rows = 3
+cols = 5
+'''
 # s = []
 # for row in range(rows):
 #     s +=[[0]*cols]
 
 # print("s=",s) 
 
+rows = 6
+cols = 6
+table = []
+
+# 2차원 리스트를 생성한다.
+for row in range(rows):
+        table += [[0]*cols]
+# print(table)    
+# 2차원 리스트에 각각의 요소들을 더한다.
+for row in range(rows):
+    for col in range(cols):
+        table[row][col] = (row+1+col+1)
+print(table)

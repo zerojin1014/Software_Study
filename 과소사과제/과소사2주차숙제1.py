@@ -16,7 +16,7 @@ def solution(statement):
                 count += 1
     return count
 
-print(solution("12354abc!!!"))
+print(solution("1234454abc!!!"))
 
 
 # Message = input("입력하세요 :")

@@ -16,6 +16,22 @@
 
 # print(Maxnum(40,24))
 
+def Maxnum(a,b):
+    while b != 0 :
+        x = a
+        a = b
+        b = x%b
+    
+    return(a)
+
+print(Maxnum(24,40))
+print(Maxnum(40,24))
+''' 8 16 
+x = 8 a = 16 b = 8%16 = 8
+x = 16 a = 8 b = 16%8 = 0'''
+
+
+'''
 def solution(a,b):
     while b > 0 :
         tmp = a%b
@@ -24,3 +40,4 @@ def solution(a,b):
     return a
 
 print(solution(12,28))
+'''
