@@ -23,6 +23,6 @@ def sub(mylist):
     print("함수 내부에서의 mylist : ", mylist)
     return
 
-mylist =[10,20,30,40];
+mylist =[10,20,30,40]
 sub(mylist)
 print("함수 외부에서의 mylist : ", mylist)

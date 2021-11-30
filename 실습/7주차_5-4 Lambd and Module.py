@@ -28,12 +28,12 @@ def main():
     processList(nlist)
     printList(nlist)
     
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
 def readList():
     nlist = []
-    flag = True;
+    flag = True
     while flag :
         number = int(input("숫자를 입력하세요 : "))
         if number < 0 :

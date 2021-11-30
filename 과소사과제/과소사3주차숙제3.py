@@ -5,6 +5,21 @@
 # 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987
 # 이므로, 마지막 값인 987을 반환한다.
 
+def pibo(lastnum):
+
+    '''
+    피보나치 수열 진행 
+    a b 
+    쭉쭉쭉쭉 하다가
+    if 수열의 b 값이 > lastnum 면 a값 리턴'''
+
+    a,b = 0,1
+    while b >= lastnum:
+        a,b = b,a+b
+    return a
+
+print(pibo(1000))
+
 
 # def solution(n):
 #     a = 0 

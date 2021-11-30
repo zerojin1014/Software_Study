@@ -8,13 +8,31 @@
 
 
 def solution(first, second, third):
-    answer = ''
     if first >= second and first >= third :
         return first
-    elif second >= first and second >= third :
+    elif second >= third and second >= third :
         return second
-    else:
+    elif third >= second and third >= first :
         return third
-    return answer
+
+print(solution(3.52,123.52,213.22))
+    
+
+
+
+
+
+
+
+
+
+
+    # if first >= second and first >= third :
+    #     return first
+    # elif second >= first and second >= third :
+    #     return second
+    # else:
+    #     return third
+    # return answer
 
     

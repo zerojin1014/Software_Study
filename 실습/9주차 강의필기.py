@@ -164,7 +164,7 @@ def check_pal(s):
     
     while True :
         if low > high:
-            return True;
+            return True
         
         a = s[low]
         b = s[high]

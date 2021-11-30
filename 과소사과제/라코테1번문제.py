@@ -16,3 +16,13 @@
 #     # b=x%b
 #     a,b=b,a%b       #이런식으로 간단하게 만들 수도 있다.
 # print("GCD is %d" %a)
+
+def solution(a,b):
+
+    while b != 0:
+        x = a
+        a = b
+        b = x%b
+    return a
+
+print(solution(24,40))
