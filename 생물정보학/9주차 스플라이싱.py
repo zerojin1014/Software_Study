@@ -31,5 +31,3 @@ print(source)
 source1 = source[1:-1]
 print(source1)
 
-
-################### 10주차 내용 ######################
