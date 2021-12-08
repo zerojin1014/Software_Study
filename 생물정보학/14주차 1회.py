@@ -42,3 +42,15 @@ print(c)
 ''' 파일을 w모드로 열면 안에 내용들이 싹 다 사라진다
  a모드로 열면 추가 가능 '''
  ######################################################
+
+
+#  with open("foo.txt", "w") as f:
+#     f.write("Life is too short, you need python")
+# # 위와 같이 with문을 사용하면 with 블록을 벗어나는 순간 열린 파일 객체 f가 자동으로 close되어 편리하다.
+ 
+# #import sys
+
+# args = sys.argv[1:]
+# for i in args:
+#     print(i)
+
