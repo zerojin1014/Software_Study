@@ -8,6 +8,7 @@ f.close()
 i = 0
 row = 0
 count = ''
+print(SeqList)
 print(len(SeqList))
 while row < len(SeqList):
     
