@@ -19,7 +19,7 @@ sequence_dict ={}
 
 while row <= len(SeqList):
     
-    print(row, len(SeqList))
+    # print(row, len(SeqList))
     
     rowindex = row -1
     rowstring = SeqList[rowindex]
