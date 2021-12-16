@@ -1,5 +1,7 @@
+# 기본 메뉴 불러오는 함수
+
 def showMenu() :
-    print("------------------")
+    print("---------------------")
     print("1. 연락처 리스트 출력")
     print("2. 연락처 추가")
     print("3. 연락처 삭제")
@@ -8,6 +10,27 @@ def showMenu() :
     print("9. 종료")
     
     return int(input("메뉴를 선택하시오 : "))
+
+# 클래스 메소드
+
+class Person :
+    def __init__(self,name,number):
+        self.__name = name
+        self.__number = number
+
+    def getName(self):
+        return self.__name
+
+    def getNumber(self):
+        return self.__number
+
+    def setName(self,name):
+        self.__name = name
+    
+    def setNumber(self, number):
+        self.__number = number
+
+
 
 # 2. 연락처 추가
 
