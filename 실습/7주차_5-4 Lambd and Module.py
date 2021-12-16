@@ -7,6 +7,8 @@
 
 sum = lambda x, y : x+y
 
+sum = lambda x, y : x+y
+
 print(sum(10,20))
 print(sum(30,40))
 
