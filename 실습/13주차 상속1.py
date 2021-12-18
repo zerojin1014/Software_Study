@@ -2,44 +2,44 @@
 # #     생성자
 # #     메소드
 
-# class Vechicle : 
-#     def __init__(self,make,model):
-#         self.make = make
-#         self.model = model
+class Vechicle : 
+    def __init__(self,make,model):
+        self.make = make
+        self.model = model
     
-#     #설정자 메소드
-#     def setMake(self,make):
-#         self.make = make
+    #설정자 메소드
+    def setMake(self,make):
+        self.make = make
     
-#     #접근자 메소드
-#     def getMake(self):
-#         return self.make
+    #접근자 메소드
+    def getMake(self):
+        return self.make
 
-#     def getDesc(self):
-#         return "차량 = ("+str(self.make)+")"+\
-#             str(self.model)
+    def getDesc(self):
+        return "차량 = ("+str(self.make)+")"+\
+            str(self.model)
 
-# class Truck(Vechicle):
-#     def __init__(self,make,model,payload):
-#         super().__init__(make,model)        ########### 중요
-#         self.payload = payload
+class Truck(Vechicle):
+    def __init__(self,make,model,payload):
+        super().__init__(make,model)        ########### 중요
+        self.payload = payload
 
-#     # 설정자 메소드
-#     def setPayload(self,payload):
-#         self.payload = payload
+    # 설정자 메소드
+    def setPayload(self,payload):
+        self.payload = payload
 
-#     # 접근자 메소드
-#     def getPayload(self):
-#         return self.payload 
+    # 접근자 메소드
+    def getPayload(self):
+        return self.payload 
 
-# def main():
-#     myTruck = Truck("Tisla","Model S",2000)
-#     myTruck.setMake("Tesla")
-#     myTruck.setPayload(2000)
+def main():
+    myTruck = Truck("Tisla","Model S",2000)
+    myTruck.setMake("Tesla")
+    myTruck.setPayload(2000)
 
-#     print(myTruck.getDesc())
+    print(myTruck.getDesc())
 
-# print(main())
+print(main())
 
 
 class Car :

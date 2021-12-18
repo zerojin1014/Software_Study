@@ -22,3 +22,6 @@ class Dog(Animal):
 
 d = Dog()
 d.eat()
+
+# for car in cars:
+#     pirnt( car.name +":"+ car.drive())

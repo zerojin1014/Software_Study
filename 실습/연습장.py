@@ -1,7 +1,15 @@
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def __str__(self):
+        return '{0}: {1}'.format(self.name, self.age)
 
-PhoneNumber = input("전화번호를 입력하세요 : ")
-PhoneNumber = PhoneNumber.replace("-","")
-PhoneNumber = PhoneNumber.replace(" ","")
-Phone_D = PhoneNumber.isdigit
-print(PhoneNumber,Phone_D)
-print(type(PhoneNumber),type(Phone_D))
+
+def main():
+    p = Person('James', 23)
+    print(p)  # James: 23  --> __str__ 호출
+
+
+main()
