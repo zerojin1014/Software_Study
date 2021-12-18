@@ -70,7 +70,7 @@ class BestFriends(Person) :
         print("Address      : " + self.__address)
         print("Birthday     : " + self.__birthday)
         print("Anniversary  : " + self.__anniversary)
-        print("")
+
 
 # 기본 메뉴 불러오는 함수
 def showMenu() :
@@ -295,9 +295,10 @@ def run ():
         # 연락처 추가
         elif menu == 2: 
             contact = add_Contact()
-            if contact != None :
-                contact_list.append(contact)
-            
+            try : ...
+            except : AttributeError
+            finally : contact_list.append(contact)
+        
         # 연락처 삭제
         elif menu == 3:
             name = input("연락처를 지우고 싶은 사람을 입력해주세요 : ")
