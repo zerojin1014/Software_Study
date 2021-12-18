@@ -121,6 +121,8 @@ def LoadContact():
 
 menu = 0
 friends_num = {}
+
+
 #value 를 객체로
 LoadContact()
 

@@ -1,15 +1,4 @@
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        
-    def __str__(self):
-        return '{0}: {1}'.format(self.name, self.age)
+contact_list = [[1,'콩쥐','팥쥐'],[2,3,4],['asd',5,6,7,8]]
 
-
-def main():
-    p = Person('James', 23)
-    print(p)  # James: 23  --> __str__ 호출
-
-
-main()
+for i, contact in enumerate(contact_list):
+    print(i, contact)
