@@ -1,6 +1,6 @@
 # 일반사람
 class Person : 
-    def __init__(self,name,number,E_mail,memo):
+    def __init__(self,name,number,E_mail='',memo=''):
         self.name = name
         self.number = number
         self.E_mail = E_mail
@@ -39,7 +39,7 @@ class Person :
 
 # 친한 친구로 등록한 사람
 class BestFriends(Person) :
-    def __init__(self,name,number,E_mail,memo,address,birthday,anniversary):
+    def __init__(self,name,number,E_mail,memo,address='',birthday='',anniversary=''):
         super().__init__ (name,number,E_mail,memo)
         self.__address = address
         self.__birthday = birthday
@@ -70,6 +70,7 @@ class BestFriends(Person) :
         print("Address      : " + self.__address)
         print("Birthday     : " + self.__birthday)
         print("Anniversary  : " + self.__anniversary)
+        print("")
 
 
 # 기본 메뉴 불러오는 함수
@@ -111,7 +112,8 @@ def add_Contact() :
     name = input("추가하고 싶은 친구 이름을 입력해주세요 : ")
 
     # 정보 입력
-    while True :    
+    distinction = 1
+    while distinction != 0  :    
 
         # 전화번호 입력
         number = input("전화번호를 입력하세요 : ")
@@ -131,16 +133,25 @@ def add_Contact() :
         else :
             print(name, number, "가 입력되었습니다.")
         
+        
+        A = number 
+        for i, contact in enumerate(contact_list) :     
+            B = contact.getNumber()
+            if A == B :
+                distinction = 0
+                print("중복된 번호 입니다.")
+                
+        if distinction == 0 :
+            break
+        
         # 이메일 입력
         E_mail = input("이메일을 입력해주세요 : ")
-        print(E_mail, "(이)가 입력되었습니다.")
-        
+    
         # 메모 입력
         memo = input("메모를 적어주세요. : ")
-        print(memo, "가 입력되었습니다.") 
   
         print(name,"님의 연락처가 저장되었습니다.")
-
+        
         contact = Person(name,number,E_mail,memo)
         return contact
 
@@ -239,7 +250,9 @@ def search_Bestfriends(bestcontact_list, name) :
     else : 
         print("그런 이름은 없습니다.")    
 
+
 # 연락처 저장하기
+
 import pickle 
 def saveContact(contact_list) : 
     file = open("friendsList.dat", "wb")
@@ -283,7 +296,9 @@ def run ():
         # 연락처 추가
         elif menu == 2: 
             contact = add_Contact()
-            contact_list.append(contact)
+            try : ...
+            except : AttributeError
+            finally : contact_list.append(contact)
         
         # 연락처 삭제
         elif menu == 3:
@@ -332,4 +347,12 @@ def run ():
             
             
 
+
+# 실행하기
 run()
+
+# People1 = Person('박영진','01040528190') 
+# People2 = Person("박영진","01040528190")
+
+# if People1 == People2 :
+#     print("같은 사람입니다")
