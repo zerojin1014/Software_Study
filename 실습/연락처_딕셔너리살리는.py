@@ -1,5 +1,4 @@
 class Person :
-    friends_num = {}
 
     def __init__(self,name,info):
         self.name = name
@@ -53,6 +52,7 @@ def addname() :
         info.append(memo)       
         
         contact = Person(name,info)
+
         friends_num[name] = info
         print(name,"님의 연락처가 저장되었습니다.")
         return contact

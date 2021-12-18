@@ -8,7 +8,7 @@ class Person :
     
     def __str__(self):
         return '(%d, %d, %d, %d)' %(self.name,self.number,self.E_mail,self.memo)
-        
+
     def __eq__(self, other):
         return (self.name == other.name) and (self.number == other.number)
     
@@ -113,7 +113,7 @@ def add_Contact() :
     # 정보 입력
     distinction = 1
     while distinction != 0  :    
-
+        distinction = 1
         # 전화번호 입력
         number = input("전화번호를 입력하세요 : ")
         number = number.replace("-","")
@@ -139,9 +139,7 @@ def add_Contact() :
             if A == B :
                 distinction = 0
                 print("중복된 번호 입니다.")
-            else : 
-                distinction = 1
-                
+
         if distinction == 0 :
             continue
         
