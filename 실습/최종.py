@@ -9,8 +9,8 @@ class Person :
     def __str__(self):
         return '(%d, %d, %d, %d)' %(self.name,self.number,self.E_mail,self.memo)
         
-    def __eq__(self, other):
-        return (self.name == other.name) and (self.number == other.number)
+    # def __eq__(self, other):
+    #     return (self.name == other.name) and (self.number == other.number)
     
     def setName(self,name):
         self.name = name
